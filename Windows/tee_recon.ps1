@@ -8,11 +8,13 @@ function recon {
 ##                                            LOCAL RECON                                          ##
 ##												   ##
 #####################################################################################################
+
 "@ | Tee-Object -FilePath $outputFile -Append
 
     $(systeminfo | findstr /c:"Host" /c:"OS Name" /c:"Domain" /c:"Logon" | Tee-Object -FilePath $outputFile -Append)
 
     @"
+
 =========== LOCAL USERS ===============
 "@ | Tee-Object -FilePath $outputFile -Append
 
